@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block title %}
+    Album {{ form.vars.value.name }}
+{% endblock %}
+{% block body %}
+    <h1>Edition de l'album {{ form.vars.value.name }}</h1>
+    {% dump(form) %}
+
+    {{ form(form) }}
+
+{% endblock %}
+
+
+

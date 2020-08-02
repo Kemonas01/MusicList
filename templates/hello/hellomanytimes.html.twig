@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello many times !{% endblock %}
+
+{% block body %}
+
+    {% set colors = ['blue', 'red'] %}
+    {% if times  > 0 and times <=10 and times matches '/^\\d+$/'  %}
+
+        {% for i in 1..times %}
+            <h1 style="color : {{cycle(colors, i%2)}}">Hello  {{ name|capitalize }} !  ✅</h1>
+        {% endfor %}
+
+
+    {% else %}
+
+        {% for i in 1..3 %}
+            <h1 style="color : {{cycle(colors, i%2)}}">Hello  {{ name|capitalize }} !  ✅</h1>
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}

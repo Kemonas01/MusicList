@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nom de l'artiste : {{album.artist.name}}</h1>
+    <h2>Nom de l'album : {{ album.name }}</h2>
+    <ul>
+        {% for track in album.tracks %}
+            <li>Titre numéro {{ track.number }} : {{ track.song.name }} </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
